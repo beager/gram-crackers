@@ -13,6 +13,7 @@
 		8B6E955D1B8E57A30039AE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */; };
 		8B6E95691B8E57A30039AE82 /* gram_crackersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */; };
 		94449BB1358B77CA7F472D92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DC8DEBF400B97101703064 /* libPods.a */; };
+		A92519961B8E5AEB00C8292F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92519951B8E5AEB00C8292F /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,6 +39,7 @@
 		8B6E95671B8E57A30039AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gram_crackersTests.swift; sourceTree = "<group>"; };
 		8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		A92519951B8E5AEB00C8292F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 				8B6E95591B8E57A30039AE82 /* Images.xcassets */,
 				8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */,
 				8B6E95501B8E57A30039AE82 /* Supporting Files */,
+				A92519971B8E5AF100C8292F /* View Controllers */,
 			);
 			path = "gram-crackers";
 			sourceTree = "<group>";
@@ -131,6 +134,14 @@
 				8B6E95671B8E57A30039AE82 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		A92519971B8E5AF100C8292F /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				A92519951B8E5AEB00C8292F /* PhotosViewController.swift */,
+			);
+			name = "View Controllers";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -269,6 +280,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B6E95531B8E57A30039AE82 /* AppDelegate.swift in Sources */,
+				A92519961B8E5AEB00C8292F /* PhotosViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
