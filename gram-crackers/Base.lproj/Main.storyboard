@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8QK-EZ-YrD">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="7706" systemVersion="14F25a" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" initialViewController="8QK-EZ-YrD">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
     </dependencies>
@@ -17,21 +17,22 @@
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="217" id="Ia7-gR-u9v" customClass="PhotoTableViewCell" customModule="gram_crackers" customModuleProvider="target">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" rowHeight="217" id="Ia7-gR-u9v" customClass="PhotoTableViewCell" customModule="gram_crackers" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="86" width="320" height="217"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="Ia7-gR-u9v" id="hNV-xL-4na">
-                                            <rect key="frame" x="0.0" y="0.0" width="320" height="216.5"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="287" height="216.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" id="aGD-OE-WX3">
-                                                    <rect key="frame" x="51" y="0.0" width="218" height="216.5"/>
+                                                    <rect key="frame" x="51" y="0.0" width="185" height="216.5"/>
                                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                                 </imageView>
                                             </subviews>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="photoImageView" destination="hNV-xL-4na" id="dZ7-cI-sC6"/>
+                                            <segue destination="ztW-kr-G49" kind="push" id="YdP-Ka-bG3"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -47,6 +48,28 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="724" y="320"/>
+        </scene>
+        <!--Photo Details View Controller-->
+        <scene sceneID="0nv-yv-NBz">
+            <objects>
+                <viewController id="ztW-kr-G49" customClass="PhotoDetailsViewController" customModule="gram_crackers" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="2cg-RN-9V3">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" id="lc4-iR-PIg">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="SG4-Xz-U18"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Mgw-VO-KMq" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1160" y="320"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="nCQ-MX-cPy">
