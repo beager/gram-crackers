@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		8B6E95531B8E57A30039AE82 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95521B8E57A30039AE82 /* AppDelegate.swift */; };
-		8B6E95551B8E57A30039AE82 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95541B8E57A30039AE82 /* ViewController.swift */; };
 		8B6E95581B8E57A30039AE82 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E95561B8E57A30039AE82 /* Main.storyboard */; };
 		8B6E955A1B8E57A30039AE82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E95591B8E57A30039AE82 /* Images.xcassets */; };
 		8B6E955D1B8E57A30039AE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */; };
@@ -29,7 +28,6 @@
 		8B6E954D1B8E57A30039AE82 /* gram-crackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gram-crackers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6E95511B8E57A30039AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E95521B8E57A30039AE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8B6E95541B8E57A30039AE82 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B6E95571B8E57A30039AE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B6E95591B8E57A30039AE82 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		8B6E955C1B8E57A30039AE82 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
@@ -78,7 +76,6 @@
 			isa = PBXGroup;
 			children = (
 				8B6E95521B8E57A30039AE82 /* AppDelegate.swift */,
-				8B6E95541B8E57A30039AE82 /* ViewController.swift */,
 				8B6E95561B8E57A30039AE82 /* Main.storyboard */,
 				8B6E95591B8E57A30039AE82 /* Images.xcassets */,
 				8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */,
@@ -212,7 +209,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B6E95551B8E57A30039AE82 /* ViewController.swift in Sources */,
 				8B6E95531B8E57A30039AE82 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -341,6 +337,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -351,6 +348,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
