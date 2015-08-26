@@ -57,12 +57,9 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
             var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
             self.photos = responseDictionary["data"] as! NSArray
             
-            NSLog("response: \(self.photos)")
+            self.refreshControl.endRefreshing()
         }
     }
-    
-    
-
     
     // MARK: - Navigation
 
