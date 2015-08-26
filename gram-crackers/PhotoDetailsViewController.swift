@@ -10,7 +10,7 @@ import UIKit
 
 class PhotoDetailsViewController: UIViewController {
 
-    var selectedPhoto
+    var selectedPhoto: AnyObject?
     
     override func viewDidLoad() {
         super.viewDidLoad()

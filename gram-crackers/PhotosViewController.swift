@@ -16,6 +16,8 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
     
     var photos = NSArray();
     
+    var refreshControl: UIRefreshControl!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -30,6 +32,13 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
             
             NSLog("response: \(self.photos)")
         }
+        
+        // refresh control
+        self.refreshControl = UIRefreshControl()
+        self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
+        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        
+        self.tableView.addSubview(self.refreshControl)
     }
 
     override func didReceiveMemoryWarning() {
@@ -37,7 +46,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
         // Dispose of any resources that can be recreated.
     }
     
-    override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
@@ -50,9 +59,9 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        var vc = segue.destinationViewController as PhotoDetailsViewController
-        var indexPath = tableView.indexPathForCell(sender as UITableViewCell)
-        var thePhoto = photos[indexPath]
+        var vc = segue.destinationViewController as! PhotoDetailsViewController
+        var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
+        var thePhoto = indexPath?.item
     }
 
 }
