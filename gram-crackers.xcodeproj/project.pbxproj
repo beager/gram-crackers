@@ -12,6 +12,7 @@
 		8B6E955A1B8E57A30039AE82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E95591B8E57A30039AE82 /* Images.xcassets */; };
 		8B6E955D1B8E57A30039AE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */; };
 		8B6E95691B8E57A30039AE82 /* gram_crackersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */; };
+		94449BB1358B77CA7F472D92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DC8DEBF400B97101703064 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,6 +26,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15DC8DEBF400B97101703064 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		7F84DB320C362EB2C2EA7A6C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		8B6E954D1B8E57A30039AE82 /* gram-crackers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "gram-crackers.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6E95511B8E57A30039AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E95521B8E57A30039AE82 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -34,6 +37,7 @@
 		8B6E95621B8E57A30039AE82 /* gram-crackersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gram-crackersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6E95671B8E57A30039AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gram_crackersTests.swift; sourceTree = "<group>"; };
+		8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +45,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94449BB1358B77CA7F472D92 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -54,12 +59,31 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5965B383ADFF1F93484AB301 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				15DC8DEBF400B97101703064 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		5D7BF844C24581A969C05D66 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7F84DB320C362EB2C2EA7A6C /* Pods.debug.xcconfig */,
+				8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		8B6E95441B8E57A30039AE82 = {
 			isa = PBXGroup;
 			children = (
 				8B6E954F1B8E57A30039AE82 /* gram-crackers */,
 				8B6E95651B8E57A30039AE82 /* gram-crackersTests */,
 				8B6E954E1B8E57A30039AE82 /* Products */,
+				5D7BF844C24581A969C05D66 /* Pods */,
+				5965B383ADFF1F93484AB301 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -116,9 +140,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B6E956C1B8E57A30039AE82 /* Build configuration list for PBXNativeTarget "gram-crackers" */;
 			buildPhases = (
+				718F1D2769D16C5A92E95CA2 /* Check Pods Manifest.lock */,
 				8B6E95491B8E57A30039AE82 /* Sources */,
 				8B6E954A1B8E57A30039AE82 /* Frameworks */,
 				8B6E954B1B8E57A30039AE82 /* Resources */,
+				A77297E1B0356A28BD5A1333 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -203,6 +229,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		718F1D2769D16C5A92E95CA2 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		A77297E1B0356A28BD5A1333 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		8B6E95491B8E57A30039AE82 /* Sources */ = {
@@ -334,6 +393,7 @@
 		};
 		8B6E956D1B8E57A30039AE82 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F84DB320C362EB2C2EA7A6C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
@@ -345,6 +405,7 @@
 		};
 		8B6E956E1B8E57A30039AE82 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
@@ -407,6 +468,7 @@
 				8B6E956E1B8E57A30039AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8B6E956F1B8E57A30039AE82 /* Build configuration list for PBXNativeTarget "gram-crackersTests" */ = {
 			isa = XCConfigurationList;
@@ -415,6 +477,7 @@
 				8B6E95711B8E57A30039AE82 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
