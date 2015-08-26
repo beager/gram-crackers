@@ -36,7 +36,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
         // refresh control
         self.refreshControl = UIRefreshControl()
         self.refreshControl.attributedTitle = NSAttributedString(string: "Pull to refresh")
-        self.refreshControl.addTarget(self, action: "refresh:", forControlEvents: UIControlEvents.ValueChanged)
+        self.refreshControl.addTarget(self, action: "onRefresh:", forControlEvents: UIControlEvents.ValueChanged)
         
         self.tableView.addSubview(self.refreshControl)
     }
@@ -50,6 +50,17 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
         tableView.deselectRowAtIndexPath(indexPath, animated: true)
     }
     
+    func onRefresh(sender:AnyObject) {
+        var url = NSURL(string: self.apiUrl)!
+        var request = NSURLRequest(URL: url)
+        NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in
+            var responseDictionary = NSJSONSerialization.JSONObjectWithData(data, options: nil, error: nil) as! NSDictionary
+            self.photos = responseDictionary["data"] as! NSArray
+            
+            NSLog("response: \(self.photos)")
+        }
+    }
+    
     
 
     
@@ -61,7 +72,7 @@ class PhotosViewController: UIViewController, UITableViewDelegate {
         // Pass the selected object to the new view controller.
         var vc = segue.destinationViewController as! PhotoDetailsViewController
         var indexPath = tableView.indexPathForCell(sender as! UITableViewCell)
-        var thePhoto = indexPath?.item
+        var thePhoto = indexPath!.item
     }
 
 }
