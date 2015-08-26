@@ -10,6 +10,8 @@ import UIKit
 
 class PhotosViewController: UIViewController {
 
+    @IBOutlet weak var tableView: UITableView!
+    
     let apiUrl = "https://api.instagram.com/v1/media/popular?client_id=88028909273e4f08842918e6c4734d90"
     
     var photos = NSArray();
@@ -18,6 +20,8 @@ class PhotosViewController: UIViewController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        tableView.rowHeight = 320;
+        
         var url = NSURL(string: self.apiUrl)!
         var request = NSURLRequest(URL: url)
         NSURLConnection.sendAsynchronousRequest(request, queue: NSOperationQueue.mainQueue()) { (response: NSURLResponse!, data: NSData!, error: NSError!) -> Void in

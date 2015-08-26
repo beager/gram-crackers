@@ -12,6 +12,7 @@
 		8B6E955A1B8E57A30039AE82 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E95591B8E57A30039AE82 /* Images.xcassets */; };
 		8B6E955D1B8E57A30039AE82 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */; };
 		8B6E95691B8E57A30039AE82 /* gram_crackersTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */; };
+		8B6E95731B8E5E0E0039AE82 /* PhotoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B6E95721B8E5E0E0039AE82 /* PhotoTableViewCell.swift */; };
 		94449BB1358B77CA7F472D92 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 15DC8DEBF400B97101703064 /* libPods.a */; };
 		A92519961B8E5AEB00C8292F /* PhotosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A92519951B8E5AEB00C8292F /* PhotosViewController.swift */; };
 /* End PBXBuildFile section */
@@ -38,6 +39,8 @@
 		8B6E95621B8E57A30039AE82 /* gram-crackersTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "gram-crackersTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B6E95671B8E57A30039AE82 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8B6E95681B8E57A30039AE82 /* gram_crackersTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = gram_crackersTests.swift; sourceTree = "<group>"; };
+		8B6E95721B8E5E0E0039AE82 /* PhotoTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoTableViewCell.swift; sourceTree = "<group>"; };
+		8B6E95741B8E5FBB0039AE82 /* gram-crackers-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "gram-crackers-Bridging-Header.h"; sourceTree = "<group>"; };
 		8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		A92519951B8E5AEB00C8292F /* PhotosViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotosViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -107,6 +110,7 @@
 				8B6E955B1B8E57A30039AE82 /* LaunchScreen.xib */,
 				8B6E95501B8E57A30039AE82 /* Supporting Files */,
 				A92519971B8E5AF100C8292F /* View Controllers */,
+				8B6E95741B8E5FBB0039AE82 /* gram-crackers-Bridging-Header.h */,
 			);
 			path = "gram-crackers";
 			sourceTree = "<group>";
@@ -139,6 +143,7 @@
 		A92519971B8E5AF100C8292F /* View Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				8B6E95721B8E5E0E0039AE82 /* PhotoTableViewCell.swift */,
 				A92519951B8E5AEB00C8292F /* PhotosViewController.swift */,
 			);
 			name = "View Controllers";
@@ -281,6 +286,7 @@
 			files = (
 				8B6E95531B8E57A30039AE82 /* AppDelegate.swift in Sources */,
 				A92519961B8E5AEB00C8292F /* PhotosViewController.swift in Sources */,
+				8B6E95731B8E5E0E0039AE82 /* PhotoTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -408,10 +414,13 @@
 			baseConfigurationReference = 7F84DB320C362EB2C2EA7A6C /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gram-crackers/gram-crackers-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 			};
 			name = Debug;
 		};
@@ -420,10 +429,12 @@
 			baseConfigurationReference = 8E28F8E99AE26A9F5C756454 /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				INFOPLIST_FILE = "gram-crackers/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "gram-crackers/gram-crackers-Bridging-Header.h";
 			};
 			name = Release;
 		};
